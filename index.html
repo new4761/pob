@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+</head>
+
+
+<script>
+    //fuction for    randrom coin//
+
+
+    function random_Coin() {
+        var random_coin = 0;
+        var round_of_ranDomcoin = 0;
+        var coin = 0;
+        var loop_input = 10000;
+        var coin_sum = 0;
+        var ran1, ran2, ran3, ran4, ran5, ran6, ran7, ran8, ran9, ran10;
+
+        for (i = 0; i < loop_input; i++) {
+            random_coin = Math.floor((Math.random() * 2) + 0);
+            coin_sum += random_coin;
+            switch (i) {
+                case 999:
+                    ran1 = coin_sum / 1000;
+                    break;
+                case 1999:
+                    ran2 = coin_sum / 2000
+                    break;
+                case 2999:
+                    ran3 = coin_sum / 3000;
+                    break;
+                case 3999:
+                    ran4 = coin_sum / 4000
+                    break;
+                case 4999:
+                    ran5 = coin_sum / 5000;
+                    break;
+                case 5999:
+                    ran6 = coin_sum / 6000
+                    break;
+                case 6999:
+                    ran7 = coin_sum / 7000;
+                    break;
+                case 7999:
+                    ran8 = coin_sum / 8000
+                    break;
+                case 8999:
+                    ran9 = coin_sum / 9000;
+                    break;
+                case 9999:
+                    ran10 = coin_sum / 10000
+                    break;
+
+
+
+            }
+
+        }
+        console.log("head:" + coin_sum);
+        console.log("tail:" + (loop_input - coin_sum));
+        console.log("pob_head:" + (coin_sum / loop_input));
+        console.log("pob_tail:" + ((loop_input - coin_sum) / loop_input));
+        document.getElementById("head_cout").innerText = coin_sum;
+        document.getElementById("head_pob").innerText = (coin_sum / loop_input);
+
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000"],
+                datasets: [{
+                    label: '#',
+                    data: [ran1, ran2, ran3, ran4, ran5, ran6, ran7, ran8, ran9, ran10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    }
+    // End fuction for randrom coin//
+    // fuction for Ex2 //
+    function Ex() {
+        var random_coin = 0;
+        var round_of_ranDomcoin = 0;
+        var coin = 0;
+        var loop_input = 0;
+        var coin_sum = 0;
+        var data = [10];
+        loop_input = document.getElementById("loop_cout").value;
+        console.log("input" + "=" + loop_input);
+        for (i = 0; i < loop_input; i++) {
+            random_coin = Math.floor((Math.random() * 3) + 0);
+            coin_sum += random_coin;
+        }
+        console.log("head:" + coin_sum);
+        console.log("pob_head:" + (coin_sum / loop_input));
+        document.getElementById("head_cout").innerText = coin_sum;
+        document.getElementById("head_pob").innerText = (coin_sum / loop_input);
+    }
+</script>
+
+<body>
+    <div id="ex1" style="width:400px;  height:400px;">
+
+        <input type="text" id="loop_cout">
+        <input type="submit" onclick="random_Coin();">
+        <p id="head_cout"> </p>
+        <br>
+        <p id="head_pob"> </p>
+        <canvas id="myChart" width="200" height="200"></canvas>
+
+
+    </div>
+
+
+
+
+</body>
+</htm>
