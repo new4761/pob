@@ -10,10 +10,10 @@
 
 
 <script>
-    //fuction for    randrom coin//
+   //fuction for    randrom coin//
 
 
-    function random_Coin() {
+  function random_Coin() {
         var random_coin = 0;
         var round_of_ranDomcoin = 0;
         var coin = 0;
@@ -61,12 +61,7 @@
             }
 
         }
-        console.log("head:" + coin_sum);
-        console.log("tail:" + (loop_input - coin_sum));
-        console.log("pob_head:" + (coin_sum / loop_input));
-        console.log("pob_tail:" + ((loop_input - coin_sum) / loop_input));
-        document.getElementById("head_cout").innerText = coin_sum;
-        document.getElementById("head_pob").innerText = (coin_sum / loop_input);
+
 
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
@@ -109,40 +104,114 @@
     }
     // End fuction for randrom coin//
     // fuction for Ex2 //
-    function Ex() {
-        var random_coin = 0;
+    function Ex2 (){
+        var random_dice = 0;
         var round_of_ranDomcoin = 0;
         var coin = 0;
-        var loop_input = 0;
-        var coin_sum = 0;
+        var loop_input = 6000;
+        var dice_sum1 = 0;var dice_sum2 = 0;var dice_sum3 = 0;var dice_sum4 = 0;var dice_sum5 = 0;var dice_sum6 = 0;
         var data = [10];
-        loop_input = document.getElementById("loop_cout").value;
-        console.log("input" + "=" + loop_input);
+
         for (i = 0; i < loop_input; i++) {
-            random_coin = Math.floor((Math.random() * 3) + 0);
-            coin_sum += random_coin;
+            random_dice = Math.floor((Math.random() * 6) + 1);
+            if(random_dice==1){dice_sum1++;}
+             else if(random_dice==2){dice_sum2++;}
+			  else if(random_dice==3){dice_sum3++;}
+			   else if(random_dice==4){dice_sum4++;}
+			    else if(random_dice==5){dice_sum5++;}
+				 else dice_sum6++;
+
+
         }
-        console.log("head:" + coin_sum);
-        console.log("pob_head:" + (coin_sum / loop_input));
-        document.getElementById("head_cout").innerText = coin_sum;
-        document.getElementById("head_pob").innerText = (coin_sum / loop_input);
-    }
+		  dice_sum1=dice_sum1/loop_input;
+		  dice_sum2=dice_sum2/loop_input;
+		  dice_sum3=dice_sum3/loop_input;
+		  dice_sum4=dice_sum4/loop_input;
+		  dice_sum5=dice_sum5/loop_input;
+		  dice_sum6=dice_sum/loop_input;
+ 
+		     var ctx = document.getElementById("diceChar").getContext('2d');
+        var diceChar = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["1000", "2000", "3000", "4000", "5000", "6000"],
+                datasets: [{
+                    label: '#',
+                    data: [dice_sum1, dice_sum2, dice_sum3, dice_sum4, dice_sum5, dice_sum6],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+		}
+		//end fuction EX2//
+  // Fuction  EX3 //
+   function Ex3 (){
+    var loop_input = 100;
+        var sum1 = 0;
+          for (i = 0; i < loop_input; i++) {
+            random_wd = Math.floor((Math.random() * 3) );
+             if(random_wd==1){sum1++;}
+             else if(random_wd==2){sum1=sum1+2;}
+			 }
+
+			 sum1=sum1-loop_input;
+
+			 }
+
 </script>
 
 <body>
-    <div id="ex1" style="width:400px;  height:400px;">
+     <div id="ex1" style="width:400px;  height:400px;">
 
-        <input type="text" id="loop_cout">
-        <input type="submit" onclick="random_Coin();">
-        <p id="head_cout"> </p>
-        <br>
-        <p id="head_pob"> </p>
-        <canvas id="myChart" width="200" height="200"></canvas>
+     <p> EX1
+        <input type="submit" onclick="random_Coin()"> </p>
+     
+        <canvas id="myChart" width="200" height="200"></canvas> 
+
+ 
+
+    </div>
+	<br>
+ <div id="ex2" style="width:400px;  height:400px;">
+<p> Ex 2
+        <input type="submit" onclick="Ex2()">  </p>
+        <canvas id="diceChar" width="200" height="200"></canvas>
 
 
     </div>
+<br>
+ <div id="ex3" style="width:400px;  height:400px;">
+<p> Ex 3
+        <input type="submit" onclick="Ex2()">  </p>
+        <canvas id="diceChar" width="200" height="200"></canvas>
 
 
+    </div>
 
 
 </body>
