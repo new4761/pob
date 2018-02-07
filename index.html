@@ -181,34 +181,34 @@
              else if(random_wd==2){sum1=sum1+2;}
 			 switch (i) {
                 case 9:
-                    nn1 = sum1;
+                    nn1 = sum1-10;
                     break;
-                case 199:
-                    nn2 = sum1 ;
+                case 19:
+                    nn2 = sum1-20 ;
                     break;
                 case 29:
-                    nn3 = sum1;
+                    nn3 = sum1-30;
                     break;
                 case 39:
-                    nn4 = sum1;
+                    nn4 = sum1-40;
                     break;
                 case 49:
-                    nn5 = sum1;
+                    nn5 = sum1-50;
                     break;
                 case 59:
-                    nn6 = sum1 ;
+                    nn6 = sum1-60;
                     break;
                 case 69:
-                    nn7 = sum1;
+                    nn7 = sum1-70;
                     break;
                 case 79:
-                    nn8 = sum1;
+                    nn8 = sum1-80;
                     break;
                 case 89:
-                    nn9 = sum1 ;
+                    nn9 = sum1-90 ;
                     break;
                 case 99:
-                    nn10 = sum1 ;
+                    nn10 = sum1-100 ;
                     break;
 
 
@@ -216,20 +216,14 @@
             }
 			 
 			 
-			 
-			 }
-
-			 sum1=sum1-loop_input;
-              
-			 
+			}
           var ctx = document.getElementById("ex3Char").getContext('2d');
         var ex3Char = new Chart(ctx, {
-           type: 'scatter',
-            data: {
-             datasets: [{
-              label: '100',
-               data: [{
-                data: [{
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: '100',
+            data: [{
                 x: 10,
                 y: nn1
             }, {
@@ -239,90 +233,160 @@
                 x: 30,
                 y: nn3
             },{
-                x: 40,
+			    x: 40,
                 y: nn4
-            }, {
-                x: 50,
+			
+			},{
+			    x: 50,
                 y: nn5
-            }, {
-                x: 60,
+			
+			},{
+			    x: 60,
                 y: nn6
-            }, {
-                x: 70,
+			
+			},{
+			    x: 70,
                 y: nn7
-            }, {
-                x: 80,
+			
+			},{
+			    x: 80,
                 y: nn8
-            }, {
-                x: 90,
+			
+			},{
+			    x: 90,
                 y: nn9
-            }, {
-                x: 100,
+			
+			},{
+			    x: 100,
                 y: nn10
-            }, 
 			
-			
-			
-			
-			
-			
-			
-			]
-		
-		}]
-    },
-	
-    options: {
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                 position: 'bottom'
-            }]
-        }
-    }
-});
-   }
-//end fuction EX3//
- // Fuction  EX4 //
- function Ex4 (){
-    var loop_input = 100;
-        var sum1 = 0;
-          for (i = 0; i < loop_input; i++) {
-            random_wd = Math.floor((Math.random() * 5) );
-             if(random_wd==0){sum1=sum1;}
-             else if(random_wd==1){sum1=sum1;}
-			 else if(random_wd==2){sum1=sum1;}
-			 else if(random_wd==3){sum1++;}
-			 else if(random_wd==4){sum1=sum1+4;}
-			 
-			 }
-
-			 sum1=sum1-loop_input;
-
-			 
-          var ctx = document.getElementById("ex4Char").getContext('2d');
-        var ex4Char = new Chart(ctx, {
-           type: 'scatter',
-            data: {
-             datasets: [{
-              label: '100',
-               data: [{
-                x: 100,
-                y: sum1,
-            
-            }]
-
+			}]
         }]
     },
     options: {
         scales: {
             xAxes: [{
                 type: 'linear',
-                 position: 'bottom'
+                position: 'bottom'
             }]
         }
     }
 });
+    
+	
+   }
+//end fuction EX3//
+ // Fuction  EX4 //
+ function Ex4 (){
+    var loop_input = 100;
+        var sum1 = 0;
+          var mm1,mm2,mm3,mm4,mm5,mm6,mm7,mm8,mm9,mm10; 
+		  for (i = 0; i < loop_input; i++) {
+            random_wd = Math.floor((Math.random() * 5) );
+             if(random_wd==0){sum1=sum1;}
+             else if(random_wd==1){sum1=sum1;}
+			 else if(random_wd==2){sum1=sum1;}
+			 else if(random_wd==3){sum1++;}
+			 else if(random_wd==4){sum1=sum1+4;}
+			 switch (i) {
+                case 9:
+                    mm1 = sum1-10;
+                    break;
+                case 19:
+                    mm2 = sum1-20 ;
+                    break;
+                case 29:
+                    mm3 = sum1-30;
+                    break;
+                case 39:
+                    mm4 = sum1-40;
+                    break;
+                case 49:
+                    m5m = sum1-50;
+                    break;
+                case 59:
+                    m6m = sum1-60;
+                    break;
+                case 69:
+                    mm7 = sum1-70;
+                    break;
+                case 79:
+                    mm8 = sum1-80;
+                    break;
+                case 89:
+                    mm9 = sum1-90 ;
+                    break;
+                case 99:
+                    mm10 = sum1-100 ;
+                    break;
+
+
+
+            }
+			 
+			 
+			}
+
+			
+
+			 
+        var ctx = document.getElementById("ex4Char").getContext('2d');
+        var ex4Char = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: '100',
+            data: [{
+                x: 10,
+                y: mm1
+            }, {
+                x: 20,
+                y: mm2
+            }, {
+                x: 30,
+                y: mm3
+            },{
+			    x: 40,
+                y: mm4
+			
+			},{
+			    x: 50,
+                y: mm5
+			
+			},{
+			    x: 60,
+                y: mm6
+			
+			},{
+			    x: 70,
+                y: mm7
+			
+			},{
+			    x: 80,
+                y: mm8
+			
+			},{
+			    x: 90,
+                y: mm9
+			
+			},{
+			    x: 100,
+                y: mm10
+			
+			}]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+    
+	
    }
 //end fuction EX4//
 // Fuction  Ex5 //
