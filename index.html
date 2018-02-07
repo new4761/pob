@@ -173,15 +173,54 @@
    function Ex3 (){
     var loop_input = 100;
         var sum1 = 0;
+		var nn1,nn2,nn3,nn4,nn5,nn6,nn7,nn8,nn9,nn10;
           for (i = 0; i < loop_input; i++) {
             random_wd = Math.floor((Math.random() * 3) );
           if(random_wd==0){sum1=sum1;}
 		   else  if(random_wd==1){sum1++;}
              else if(random_wd==2){sum1=sum1+2;}
+			 switch (i) {
+                case 9:
+                    nn1 = sum1;
+                    break;
+                case 199:
+                    nn2 = sum1 ;
+                    break;
+                case 29:
+                    nn3 = sum1;
+                    break;
+                case 39:
+                    nn4 = sum1;
+                    break;
+                case 49:
+                    nn5 = sum1;
+                    break;
+                case 59:
+                    nn6 = sum1 ;
+                    break;
+                case 69:
+                    nn7 = sum1;
+                    break;
+                case 79:
+                    nn8 = sum1;
+                    break;
+                case 89:
+                    nn9 = sum1 ;
+                    break;
+                case 99:
+                    nn10 = sum1 ;
+                    break;
+
+
+
+            }
+			 
+			 
+			 
 			 }
 
 			 sum1=sum1-loop_input;
-
+              
 			 
           var ctx = document.getElementById("ex3Char").getContext('2d');
         var ex3Char = new Chart(ctx, {
@@ -190,11 +229,45 @@
              datasets: [{
               label: '100',
                data: [{
+                data: [{
+                x: 10,
+                y: nn1
+            }, {
+                x: 20,
+                y: nn2
+            }, {
+                x: 30,
+                y: nn3
+            },{
+                x: 40,
+                y: nn4
+            }, {
+                x: 50,
+                y: nn5
+            }, {
+                x: 60,
+                y: nn6
+            }, {
+                x: 70,
+                y: nn7
+            }, {
+                x: 80,
+                y: nn8
+            }, {
+                x: 90,
+                y: nn9
+            }, {
                 x: 100,
-                y: sum1,
-            
-            }]
-       
+                y: nn10
+            }, 
+			
+			
+			
+			
+			
+			
+			
+			]
 		
 		}]
     },
