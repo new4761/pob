@@ -7,22 +7,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 	<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+	#ex1,#ex2,#ex3,#ex4,#ex5,#ex6 {
+	
+	margin: 30px; float: left;
+			}
+	#ta1,#ta2,#ta3,#ta4,#ta5,#ta6 {
+	
+	margin: 30px; 
+	float: left;
+			}
+	
+	body {
+    background-color: #F5F5F5;
+         }
+	p.big {
+    line-height: 1.8;
+          }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-}
+        table {
+               border-collapse: collapse;
+               width: 100%;
+              } 
 
-tr:nth-child(even){background-color: #f2f2f2}
+               th, td {
+                       text-align: left;
+                       padding: 8px;
+                      }
 
-th {
-    background-color: #4CAF50;
-    color: white;
-}
+               tr:nth-child(even){background-color: #f2f2f2}
+
+               th {
+                    background-color: #4CAF50;
+                    color: white;
+                  }
 </style>
 </head>
 
@@ -88,7 +105,7 @@ th {
             data: {
                 labels: ["1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000", "10000"],
                 datasets: [{
-                    label: "Unfilled",
+                    label: "coin flip",
                     data: [ran1, ran2, ran3, ran4, ran5, ran6, ran7, ran8, ran9, ran10],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -111,7 +128,17 @@ th {
             },
             options: {
                 scales: {
+					xAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'times'
+						}
+					}],
                     yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'prop'
+						},
                         ticks: {
                             beginAtZero: true,
 							  min: 0,
@@ -614,17 +641,63 @@ function Ex6 (){
 </script>
 
 <body>
+ 
      <div id="ex1" style="width:400px;  height:400px;">
 
-     <p> EX1
+     <p> EX 1
         <input type="submit" onclick="random_Coin()"> </p>
-     
+
         <canvas id="myChart" width="200" height="200"></canvas> 
 
- 
-
     </div>
-	<br>
+	<div id="ta1" style="width:400px;  height:400px;" align="right">
+	<br><br>
+	      <table style="width:100%">
+			<tr>
+				<th>times</th>
+				<th>head</th>
+				<th>pop head</th> 
+			</tr>
+			<tr>
+				<td>1000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>2000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>3000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>4000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>5000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>6000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>7000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>8000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>9000</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>10000</td><td>#</td><td>#</td>
+			</tr>
+		</table>
+   
+	</div>
+
+
+
+
+
+
+<br>
  <div id="ex2" style="width:400px;  height:400px;">
 <p> Ex 2
         <input type="submit" onclick="Ex2()">  </p>
@@ -632,6 +705,38 @@ function Ex6 (){
 
 
     </div>
+	<div id="ta2" style="width:400px;  height:400px;" align="right">
+	<br><br>
+	      <table style="width:100%">
+			<tr>
+				<th>face</th>
+				<th>#</th>
+				<th>pop </th> 
+			</tr>
+			<tr>
+				<td>1</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>2</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>3</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>4</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>5</td><td>#</td><td>#</td>
+			</tr>
+			<tr>
+				<td>6</td><td>#</td><td>#</td>
+			</tr>
+		</table>
+   
+	</div>
+
+
+
 <br>
  <div id="ex3" style="width:400px;  height:400px;">
 <p> Ex 3
@@ -640,14 +745,49 @@ function Ex6 (){
 
 
     </div>
+	<div id="ta3" style="width:400px;  height:400px;" align="right">
+	<br><br>
+	      <table style="width:100%">
+			<tr>
+				<th>#</th>
+				<th>#</th>
+				<th># </th> 
+			</tr>
+			<tr>
+				<td>#</td><td>#</td><td>#</td>
+			</tr>
+		
+		</table>
+   
+   
+	</div>
+
+
 <br>
  <div id="ex4" style="width:400px;  height:400px;">
-<p> Ex 4
+<p class="big"> Ex 4
         <input type="submit" onclick="Ex4()">  </p>
         <canvas id="ex4Char" width="200" height="200"></canvas>
 
 
     </div>
+	<div id="ta4" style="width:400px;  height:400px;" align="right">
+	<br><br>
+	      <table style="width:100%">
+			<tr>
+				<th>#</th>
+				<th>#</th>
+				<th># </th> 
+			</tr>
+			<tr>
+				<td>#</td><td>#</td><td>#</td>
+			</tr>
+		
+		</table>
+   
+	</div>
+
+
 <br>
  <div id="ex5" style="width:400px;  height:400px;">
 <p> Ex 5
@@ -656,6 +796,23 @@ function Ex6 (){
 
 
     </div>
+	<div id="ta5" style="width:400px;  height:400px;" align="right">
+	<br><br>
+	      <table style="width:100%">
+			<tr>
+				<th>#</th>
+				<th>#</th>
+				<th># </th> 
+			</tr>
+			<tr>
+				<td>#</td><td>#</td><td>#</td>
+			</tr>
+		
+		</table>
+   
+	</div>
+
+
 <br>
  <div id="ex6" style="width:400px;  height:400px;">
 <p> Ex 6
@@ -664,7 +821,25 @@ function Ex6 (){
 
 
     </div>
+	<div id="ta6" style="width:400px;  height:400px;" align="right">
+	<br><br>
+	      <table style="width:100%">
+			<tr>
+				<th>#</th>
+				<th>#</th>
+				<th># </th> 
+			</tr>
+			<tr>
+				<td>#</td><td>#</td><td>#</td>
+			</tr>
+		
+		</table>
+   
+	</div>
+
+
 
 
 </body>
 </html>
+
