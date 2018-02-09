@@ -7,39 +7,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 	<style>
-	#ex1,#ex2,#ex3,#ex4,#ex5,#ex6 {
+	#ex1,#ex2,#ex3,#ex4,#ex5,#ex6 {margin: 30px; float: left;}
+	#ta1,#ta2,#ta3,#ta4,#ta5,#ta6 {margin: 30px; float: left;}
 	
-	margin: 30px; float: left;
-			}
-	#ta1,#ta2,#ta3,#ta4,#ta5,#ta6 {
-	
-	margin: 30px; 
-	float: left;
-			}
-	
-	body {
-    background-color: #F5F5F5;
-         }
-	p.big {
-    line-height: 1.8;
-          }
+	body {background-color: #FFFFFF;}
+	p.big {line-height: 1.8;}
 
-        table {
-               border-collapse: collapse;
-               width: 100%;
-              } 
+    table {border-collapse: collapse;
+           width: 100%;} 
 
-               th, td {
-                       text-align: left;
-                       padding: 8px;
-                      }
+           th, td {text-align: left;
+                   padding: 5px;}
 
                tr:nth-child(even){background-color: #f2f2f2}
 
-               th {
-                    background-color: #4CAF50;
-                    color: white;
-                  }
+               th {background-color: #4CAF50;
+                   color: white;}
+
+                .button {
+					padding: 7px 12px;
+				    font-size: 20px;
+					text-align: center;
+					cursor: pointer;
+					outline: none;
+					color: #fff;
+				    background-color: #4CAF50;
+					border: none;
+					border-radius: 5px;
+					box-shadow: 0 5px #999;}
+
+				.button:hover {background-color: #3e8e41}
+
+				.button:active {background-color: #3e8e41;
+				box-shadow: 0 2px #666;
+				transform: translateY(2px);
+
 </style>
 </head>
 
@@ -63,40 +65,61 @@
             switch (i) {
                 case 999:
                     ran1 = coin_sum / 1000;
+					document.getElementById("cp1").innerHTML = ran1;
+					document.getElementById("h1").innerHTML = coin_sum;
                     break;
                 case 1999:
-                    ran2 = coin_sum / 2000
+                    ran2 = coin_sum / 2000;
+					document.getElementById("cp2").innerHTML = ran2;
+					document.getElementById("h2").innerHTML = coin_sum;
                     break;
                 case 2999:
                     ran3 = coin_sum / 3000;
+					document.getElementById("cp3").innerHTML = ran3;
+					document.getElementById("h3").innerHTML = coin_sum;
                     break;
                 case 3999:
-                    ran4 = coin_sum / 4000
+                    ran4 = coin_sum / 4000;
+					document.getElementById("cp4").innerHTML = ran4;
+					document.getElementById("h4").innerHTML = coin_sum;
                     break;
                 case 4999:
                     ran5 = coin_sum / 5000;
+					document.getElementById("cp5").innerHTML = ran5;
+					document.getElementById("h5").innerHTML = coin_sum;
                     break;
                 case 5999:
-                    ran6 = coin_sum / 6000
+                    ran6 = coin_sum / 6000;
+					document.getElementById("cp6").innerHTML = ran6;
+					document.getElementById("h6").innerHTML = coin_sum;
                     break;
                 case 6999:
                     ran7 = coin_sum / 7000;
+					document.getElementById("cp7").innerHTML = ran7;
+					document.getElementById("h7").innerHTML = coin_sum;
                     break;
                 case 7999:
-                    ran8 = coin_sum / 8000
+                    ran8 = coin_sum / 8000;
+					document.getElementById("cp8").innerHTML = ran8;
+					document.getElementById("h8").innerHTML = coin_sum;
                     break;
                 case 8999:
                     ran9 = coin_sum / 9000;
+					document.getElementById("cp9").innerHTML = ran9;
+					document.getElementById("h9").innerHTML = coin_sum;
                     break;
                 case 9999:
-                    ran10 = coin_sum / 10000
+                    ran10 = coin_sum / 10000;
+					document.getElementById("cp10").innerHTML = ran10;
+					document.getElementById("h10").innerHTML = coin_sum;
                     break;
 
-
+                
 
             }
 
         }
+	
 
 
         var ctx = document.getElementById("myChart").getContext('2d');
@@ -172,12 +195,26 @@
 
 
         }
+
+		  document.getElementById("ds1").innerHTML = dice_sum1;
+		  document.getElementById("ds2").innerHTML = dice_sum2;
+		  document.getElementById("ds3").innerHTML = dice_sum3;
+		  document.getElementById("ds4").innerHTML = dice_sum4;
+		  document.getElementById("ds5").innerHTML = dice_sum5;
+		  document.getElementById("ds6").innerHTML = dice_sum6;
 		  dice_sum1=dice_sum1/loop_input;
 		  dice_sum2=dice_sum2/loop_input;
 		  dice_sum3=dice_sum3/loop_input;
 		  dice_sum4=dice_sum4/loop_input;
 		  dice_sum5=dice_sum5/loop_input;
 		  dice_sum6=dice_sum6/loop_input;
+		  document.getElementById("dp1").innerHTML = dice_sum1;
+		  document.getElementById("dp2").innerHTML = dice_sum2;
+		  document.getElementById("dp3").innerHTML = dice_sum3;
+		  document.getElementById("dp4").innerHTML = dice_sum4;
+		  document.getElementById("dp5").innerHTML = dice_sum5;
+		  document.getElementById("dp6").innerHTML = dice_sum6;
+		  
 
 		     var ctx = document.getElementById("diceChar").getContext('2d');
         var diceChar = new Chart(ctx, {
@@ -645,48 +682,48 @@ function Ex6 (){
      <div id="ex1" style="width:400px;  height:400px;">
 
      <p> EX 1
-        <input type="submit" onclick="random_Coin()"> </p>
+        <input class="button" type="submit" onclick="random_Coin()"> </p>
 
         <canvas id="myChart" width="200" height="200"></canvas> 
 
     </div>
 	<div id="ta1" style="width:400px;  height:400px;" align="right">
 	<br><br>
-	      <table style="width:100%">
+	      <table id="ta1" style="width:100%">
 			<tr>
 				<th>times</th>
 				<th>head</th>
 				<th>pop head</th> 
 			</tr>
 			<tr>
-				<td>1000</td><td>#</td><td>#</td>
+				<td>1000</td><td id="h1">#</td><td id="cp1">#</td>
 			</tr>
 			<tr>
-				<td>2000</td><td>#</td><td>#</td>
+				<td>2000</td><td id="h2">#</td><td id="cp2">#</td>
 			</tr>
 			<tr>
-				<td>3000</td><td>#</td><td>#</td>
+				<td>3000</td><td id="h3">#</td><td id="cp3">#</td>
 			</tr>
 			<tr>
-				<td>4000</td><td>#</td><td>#</td>
+				<td>4000</td><td id="h4">#</td><td id="cp4">#</td>
 			</tr>
 			<tr>
-				<td>5000</td><td>#</td><td>#</td>
+				<td>5000</td><td id="h5">#</td><td id="cp5">#</td>
 			</tr>
 			<tr>
-				<td>6000</td><td>#</td><td>#</td>
+				<td>6000</td><td id="h6">#</td><td id="cp6">#</td>
 			</tr>
 			<tr>
-				<td>7000</td><td>#</td><td>#</td>
+				<td>7000</td><td id="h7">#</td><td id="cp7">#</td>
 			</tr>
 			<tr>
-				<td>8000</td><td>#</td><td>#</td>
+				<td>8000</td><td id="h8">#</td><td id="cp8">#</td>
 			</tr>
 			<tr>
-				<td>9000</td><td>#</td><td>#</td>
+				<td>9000</td><td id="h9">#</td><td id="cp9">#</td>
 			</tr>
 			<tr>
-				<td>10000</td><td>#</td><td>#</td>
+				<td>10000</td><td id="h10">#</td><td id="cp10">#</td>
 			</tr>
 		</table>
    
@@ -700,7 +737,7 @@ function Ex6 (){
 <br>
  <div id="ex2" style="width:400px;  height:400px;">
 <p> Ex 2
-        <input type="submit" onclick="Ex2()">  </p>
+        <input  class="button"  type="submit" onclick="Ex2()">  </p>
         <canvas id="diceChar" width="200" height="200"></canvas>
 
 
@@ -710,26 +747,26 @@ function Ex6 (){
 	      <table style="width:100%">
 			<tr>
 				<th>face</th>
-				<th>#</th>
+				<th>times</th>
 				<th>pop </th> 
 			</tr>
 			<tr>
-				<td>1</td><td>#</td><td>#</td>
+				<td>1</td><td id="ds1">#</td><td id="dp1">#</td>
 			</tr>
 			<tr>
-				<td>2</td><td>#</td><td>#</td>
+				<td>2</td><td id="ds2">#</td><td id="dp2">#</td>
 			</tr>
 			<tr>
-				<td>3</td><td>#</td><td>#</td>
+				<td>3</td><td id="ds3">#</td><td id="dp3">#</td>
 			</tr>
 			<tr>
-				<td>4</td><td>#</td><td>#</td>
+				<td>4</td><td id="ds4">#</td><td id="dp4">#</td>
 			</tr>
 			<tr>
-				<td>5</td><td>#</td><td>#</td>
+				<td>5</td><td id="ds5">#</td><td id="dp5">#</td>
 			</tr>
 			<tr>
-				<td>6</td><td>#</td><td>#</td>
+				<td>6</td><td id="ds6">#</td><td id="dp6">#</td>
 			</tr>
 		</table>
    
@@ -740,7 +777,7 @@ function Ex6 (){
 <br>
  <div id="ex3" style="width:400px;  height:400px;">
 <p> Ex 3
-        <input type="submit" onclick="Ex3()">  </p>
+        <input  class="button"  type="submit" onclick="Ex3()">  </p>
         <canvas id="ex3Char" width="200" height="200"></canvas>
 
 
@@ -766,7 +803,7 @@ function Ex6 (){
 <br>
  <div id="ex4" style="width:400px;  height:400px;">
 <p class="big"> Ex 4
-        <input type="submit" onclick="Ex4()">  </p>
+        <input  class="button" type="submit" onclick="Ex4()">  </p>
         <canvas id="ex4Char" width="200" height="200"></canvas>
 
 
@@ -791,7 +828,7 @@ function Ex6 (){
 <br>
  <div id="ex5" style="width:400px;  height:400px;">
 <p> Ex 5
-        <input type="submit" onclick="Ex5()">  </p>
+        <input  class="button" type="submit" onclick="Ex5()">  </p>
         <canvas id="ex5Char" width="200" height="200"></canvas>
 
 
@@ -816,7 +853,7 @@ function Ex6 (){
 <br>
  <div id="ex6" style="width:400px;  height:400px;">
 <p> Ex 6
-        <input type="submit" onclick="Ex6()">  </p>
+        <input  class="button" type="submit" onclick="Ex6()">  </p>
         <canvas id="ex6Char" width="200" height="200"></canvas>
 
 
@@ -842,4 +879,5 @@ function Ex6 (){
 
 </body>
 </html>
+
 
