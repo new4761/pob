@@ -7,40 +7,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 	<style>
+	@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 	#ex1,#ex2,#ex3,#ex4,#ex5,#ex6 {margin: 30px; float: left;}
 	#ta1,#ta2,#ta3,#ta4,#ta5,#ta6 {margin: 30px; float: left;}
-	
-	body {background-color: #FFFFFF;}
+	.box1{float: left; width:920px;  height:50px; background-color: #4CAF59;}
+	.box2{float: left; width:920px;  height:50px; background-color:}
+	body { background: }
 	p.big {line-height: 1.8;}
 
     table {border-collapse: collapse;
            width: 100%;} 
-
            th, td {text-align: left;
-                   padding: 5px;}
-
+                   padding: 5px;
+				   font-family: 'Roboto', sans-serif;}
                tr:nth-child(even){background-color: #f2f2f2}
-
                th {background-color: #4CAF50;
                    color: white;}
 
                 .button {
-					padding: 7px 12px;
+				    font-family: 'Roboto', sans-serif;
+					padding: 10px 15px;
 				    font-size: 20px;
 					text-align: center;
 					cursor: pointer;
 					outline: none;
 					color: #fff;
 				    background-color: #4CAF50;
+					transition: all 0.5s;
 					border: none;
-					border-radius: 5px;
-					box-shadow: 0 5px #999;}
-
-				.button:hover {background-color: #3e8e41}
-
+					border-radius: 12px;
+					box-shadow: 0 5px #999;
+					letter-spacing: 0;
+	               
+					}
+				.button:hover {background-color: #3e8e41;
+				               transition: all 0.5s;
+							   
+				               letter-spacing: 1px; 
+							   
+					           }
 				.button:active {background-color: #3e8e41;
 				box-shadow: 0 2px #666;
-				transform: translateY(2px);
+				transform: translateY(2px);}
 
 </style>
 </head>
@@ -220,7 +228,7 @@
         var diceChar = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["1000", "2000", "3000", "4000", "5000", "6000"],
+                labels: ["1", "2", "3", "4", "5", "6"],
                 datasets: [{
                     label: '#',
                     data: [dice_sum1, dice_sum2, dice_sum3, dice_sum4, dice_sum5, dice_sum6],
@@ -302,10 +310,22 @@
 
 
 
+
             }
-
-
+			document.getElementById("nn1").innerHTML = nn1;
+			document.getElementById("nn2").innerHTML = nn2;
+			document.getElementById("nn3").innerHTML = nn3;
+			document.getElementById("nn4").innerHTML = nn4;
+			document.getElementById("nn5").innerHTML = nn5;
+			document.getElementById("nn6").innerHTML = nn6;
+			document.getElementById("nn7").innerHTML = nn7;
+			document.getElementById("nn8").innerHTML = nn8;
+			document.getElementById("nn9").innerHTML = nn9;
+			document.getElementById("nn10").innerHTML = nn10;
 			}
+
+
+
           var ctx = document.getElementById("ex3Char").getContext('2d');
         var ex3Char = new Chart(ctx, {
     type: 'scatter',
@@ -391,10 +411,10 @@
                     mm4 = sum1-40;
                     break;
                 case 49:
-                    m5m = sum1-50;
+                    mm5 = sum1-50;
                     break;
                 case 59:
-                    m6m = sum1-60;
+                    mm6 = sum1-60;
                     break;
                 case 69:
                     mm7 = sum1-70;
@@ -412,6 +432,16 @@
 
 
             }
+			document.getElementById("n1").innerHTML = mm1;
+			document.getElementById("n2").innerHTML = mm2;
+			document.getElementById("n3").innerHTML = mm3;
+			document.getElementById("n4").innerHTML = mm4;
+			document.getElementById("n5").innerHTML = mm5;
+			document.getElementById("n6").innerHTML = mm6;
+			document.getElementById("n7").innerHTML = mm7;
+			document.getElementById("n8").innerHTML = mm8;
+			document.getElementById("n9").innerHTML = mm9;
+			document.getElementById("n10").innerHTML = mm10;
 
 
 			}
@@ -678,7 +708,8 @@ function Ex6 (){
 </script>
 
 <body>
- 
+     <div class="box1"> </div>
+
      <div id="ex1" style="width:400px;  height:400px;">
 
      <p> EX 1
@@ -728,13 +759,14 @@ function Ex6 (){
 		</table>
    
 	</div>
-
-
+    <div class="box2"> </div>
 
 
 
 
 <br>
+     <div class="box1"> </div>
+
  <div id="ex2" style="width:400px;  height:400px;">
 <p> Ex 2
         <input  class="button"  type="submit" onclick="Ex2()">  </p>
@@ -771,10 +803,12 @@ function Ex6 (){
 		</table>
    
 	</div>
-
+    <div class="box2"> </div>
 
 
 <br>
+     <div class="box1"> </div>
+
  <div id="ex3" style="width:400px;  height:400px;">
 <p> Ex 3
         <input  class="button"  type="submit" onclick="Ex3()">  </p>
@@ -786,23 +820,51 @@ function Ex6 (){
 	<br><br>
 	      <table style="width:100%">
 			<tr>
-				<th>#</th>
-				<th>#</th>
-				<th># </th> 
+				<th>times</th>
+				<th>result</th> 
 			</tr>
 			<tr>
-				<td>#</td><td>#</td><td>#</td>
+				<td>10</td><td id="nn1">#</td>
+			</tr>
+			<tr>
+				<td>20</td><td id="nn2">#</td>
+			</tr>
+			<tr>
+				<td>30</td><td id="nn3">#</td>
+			</tr>
+			<tr>
+				<td>40</td><td id="nn4">#</td>
+			</tr>
+			<tr>
+				<td>50</td><td id="nn5">#</td>
+			</tr>
+			<tr>
+				<td>60</td><td id="nn6">#</td>
+			</tr>
+			<tr>
+				<td>70</td><td id="nn7">#</td>
+			</tr>
+			<tr>
+				<td>80</td><td id="nn8">#</td>
+			</tr>
+			<tr>
+				<td>90</td><td id="nn9">#</td>
+			</tr>
+			<tr>
+				<td>100</td><td id="nn10">#</td>
 			</tr>
 		
 		</table>
    
    
 	</div>
-
+    <div class="box2"> </div>
 
 <br>
+ <div class="box1"> </div>
+
  <div id="ex4" style="width:400px;  height:400px;">
-<p class="big"> Ex 4
+<p> Ex 4
         <input  class="button" type="submit" onclick="Ex4()">  </p>
         <canvas id="ex4Char" width="200" height="200"></canvas>
 
@@ -812,20 +874,49 @@ function Ex6 (){
 	<br><br>
 	      <table style="width:100%">
 			<tr>
-				<th>#</th>
-				<th>#</th>
-				<th># </th> 
+				<th>times</th>
+				<th>result</th> 
 			</tr>
 			<tr>
-				<td>#</td><td>#</td><td>#</td>
+				<td>10</td><td id="n1">#</td>
 			</tr>
-		
+			<tr>
+				<td>20</td><td id="n2">#</td>
+			</tr>
+			<tr>
+				<td>30</td><td id="n3">#</td>
+			</tr>
+			<tr>
+				<td>40</td><td id="n4">#</td>
+			</tr>
+			<tr>
+				<td>50</td><td id="n5">#</td>
+			</tr>
+			<tr>
+				<td>60</td><td id="n6">#</td>
+			</tr>
+			<tr>
+				<td>70</td><td id="n7">#</td>
+			</tr>
+			<tr>
+				<td>80</td><td id="n8">#</td>
+			</tr>
+			<tr>
+				<td>90</td><td id="n9">#</td>
+			</tr>
+			<tr>
+				<td>100</td><td id="n10">#</td>
+			</tr>
 		</table>
    
 	</div>
+    <div class="box2"> </div>
+
 
 
 <br>
+     <div class="box1"> </div>
+
  <div id="ex5" style="width:400px;  height:400px;">
 <p> Ex 5
         <input  class="button" type="submit" onclick="Ex5()">  </p>
@@ -848,9 +939,13 @@ function Ex6 (){
 		</table>
    
 	</div>
+    <div class="box2"> </div>
+
 
 
 <br>
+     <div class="box1"> </div>
+
  <div id="ex6" style="width:400px;  height:400px;">
 <p> Ex 6
         <input  class="button" type="submit" onclick="Ex6()">  </p>
@@ -873,6 +968,7 @@ function Ex6 (){
 		</table>
    
 	</div>
+	<div class="box2"> </div>
 
 
 
