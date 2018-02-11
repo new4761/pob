@@ -6,15 +6,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 	<style>
 	@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+	
 	#ex1,#ex2,#ex3,#ex4,#ex5,#ex6 {margin: 30px; float: left;}
 	#ta1,#ta2,#ta3,#ta4,#ta5,#ta6 {margin: 30px; float: left;}
-	.box1{float: left; width:920px;  height:50px; background-color: #4CAF59;}
-	.box2{float: left; width:920px;  height:50px; background-color:}
+	.box1{float: left; width:920px;  height:70px; background-color: #4CAF59; color:#fff;font-family: 'Kanit', sans-serif;}
+	.box2{float: left; width:920px;  height:70px; background-color:}
 	body { background: }
 	p.big {line-height: 1.8;}
-
     table {border-collapse: collapse;
            width: 100%;} 
            th, td {text-align: left;
@@ -23,7 +24,6 @@
                tr:nth-child(even){background-color: #f2f2f2}
                th {background-color: #4CAF50;
                    color: white;}
-
                 .button {
 				    font-family: 'Roboto', sans-serif;
 					padding: 10px 15px;
@@ -49,7 +49,6 @@
 				.button:active {background-color: #3e8e41;
 				box-shadow: 0 2px #666;
 				transform: translateY(2px);}
-
 </style>
 </head>
 
@@ -57,8 +56,6 @@
 
 <script>
    //fuction for    randrom coin//
-
-
   function random_Coin() {
         var random_coin = 0;
         var round_of_ranDomcoin = 0;
@@ -66,7 +63,6 @@
         var loop_input = 10000;
         var coin_sum = 0;
         var ran1, ran2, ran3, ran4, ran5, ran6, ran7, ran8, ran9, ran10;
-
         for (i = 0; i < loop_input; i++) {
             random_coin = Math.floor((Math.random() * 2) + 0);
             coin_sum += random_coin;
@@ -121,15 +117,10 @@
 					document.getElementById("cp10").innerHTML = ran10;
 					document.getElementById("h10").innerHTML = coin_sum;
                     break;
-
                 
-
             }
-
         }
 	
-
-
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'line',
@@ -180,7 +171,6 @@
                 }
             }
         });
-
     }
     // End fuction for randrom coin//
     // fuction for Ex2 //
@@ -191,7 +181,6 @@
         var loop_input = 6000;
         var dice_sum1 = 0;var dice_sum2 = 0;var dice_sum3 = 0;var dice_sum4 = 0;var dice_sum5 = 0;var dice_sum6 = 0;
         var data = [10];
-
         for (i = 0; i < loop_input; i++) {
             random_dice = Math.floor((Math.random() * 6) + 1);
             if(random_dice==1){dice_sum1++;}
@@ -200,10 +189,7 @@
 			   else if(random_dice==4){dice_sum4++;}
 			    else if(random_dice==5){dice_sum5++;}
 				 else dice_sum6++;
-
-
         }
-
 		  document.getElementById("ds1").innerHTML = dice_sum1;
 		  document.getElementById("ds2").innerHTML = dice_sum2;
 		  document.getElementById("ds3").innerHTML = dice_sum3;
@@ -223,7 +209,6 @@
 		  document.getElementById("dp5").innerHTML = dice_sum5;
 		  document.getElementById("dp6").innerHTML = dice_sum6;
 		  
-
 		     var ctx = document.getElementById("diceChar").getContext('2d');
         var diceChar = new Chart(ctx, {
             type: 'bar',
@@ -307,10 +292,6 @@
                 case 99:
                     nn10 = sum1-100 ;
                     break;
-
-
-
-
             }
 			document.getElementById("nn1").innerHTML = nn1;
 			document.getElementById("nn2").innerHTML = nn2;
@@ -323,9 +304,6 @@
 			document.getElementById("nn9").innerHTML = nn9;
 			document.getElementById("nn10").innerHTML = nn10;
 			}
-
-
-
           var ctx = document.getElementById("ex3Char").getContext('2d');
         var ex3Char = new Chart(ctx, {
     type: 'line',
@@ -344,31 +322,24 @@
             },{
 			    x: 40,
                 y: nn4
-
 			},{
 			    x: 50,
                 y: nn5
-
 			},{
 			    x: 60,
                 y: nn6
-
 			},{
 			    x: 70,
                 y: nn7
-
 			},{
 			    x: 80,
                 y: nn8
-
 			},{
 			    x: 90,
                 y: nn9
-
 			},{
 			    x: 100,
                 y: nn10
-
 			}]
         }]
     },
@@ -389,8 +360,6 @@
         }
     }
 });
-
-
    }
 //end fuction EX3//
  // Fuction  EX4 //
@@ -436,9 +405,6 @@
                 case 99:
                     mm10 = sum1-100 ;
                     break;
-
-
-
             }
 			document.getElementById("n1").innerHTML = mm1;
 			document.getElementById("n2").innerHTML = mm2;
@@ -450,13 +416,7 @@
 			document.getElementById("n8").innerHTML = mm8;
 			document.getElementById("n9").innerHTML = mm9;
 			document.getElementById("n10").innerHTML = mm10;
-
-
 			}
-
-
-
-
         var ctx = document.getElementById("ex4Char").getContext('2d');
         var ex4Char = new Chart(ctx, {
     type: 'scatter',
@@ -475,34 +435,25 @@
             },{
 			    x: 40,
                 y: mm4
-
 			},{
 			    x: 50,
                 y: mm5
-
 			},{
 			    x: 60,
                 y: mm6
-
 			},{
 			    x: 70,
                 y: mm7
-
 			},{
 			    x: 80,
                 y: mm8
-
 			},{
 			    x: 90,
                 y: mm9
-
 			},{
 			    x: 100,
                 y: mm10
-
 			}]
-
-
         }]
     },
     options: {
@@ -522,8 +473,6 @@
         }
     }
 });
-
-
    }
 //end fuction EX4//
 // Fuction  Ex5 //
@@ -534,11 +483,9 @@ function Ex5 (){
         var sum1, sum2, sum3, sum4, sum5, sum6, sum7, sum8, sum9, sum10;
         var min=0;
 		var max=1;
-
         for (i = 0; i < loop_input; i++) {
              x = Math.random() * 1;
 			 y = Math.random() * 1;
-
 			if(y<=x*x){sum++;}
             switch (i) {
                 case 999:
@@ -571,12 +518,7 @@ function Ex5 (){
                 case 9999:
                     sum10 = sum / 10000
                     break;
-
-
-
             }
-
-
 		}
   var ctx = document.getElementById("ex5Char").getContext('2d');
         var ex5Char = new Chart(ctx, {
@@ -618,9 +560,7 @@ function Ex5 (){
                 }
             }
         });
-
     }
-
 //end fuction EX5//
 // Fuction  Ex6 //
 function Ex6 (){
@@ -630,11 +570,9 @@ function Ex6 (){
         var net1, net2, net3, net4, net5, net6, net7, net8, net9, net10;
         var min=0;
 		var max=1;
-
         for (i = 0; i < loop_input; i++) {
              x = Math.random() * 1;
 			 y = Math.random() * 1;
-
 			if(y<=x*x){net++;}
             switch (i) {
                 case 999:
@@ -667,15 +605,9 @@ function Ex6 (){
                 case 9999:
                     net10 = 3*net / 10000;
                     break;
-
-
-
             }
-
-
 		}
 //end fuction EX6//
-
   var ctx = document.getElementById("ex6Char").getContext('2d');
         var ex6Char = new Chart(ctx, {
             type: 'line',
@@ -716,14 +648,7 @@ function Ex6 (){
                 }
             }
         });
-
     }
-
-
-
-
-
-
 </script>
 
 <body>
@@ -824,9 +749,9 @@ function Ex6 (){
 	</div>
     <div class="box2"> </div>
 
-//fuction for    randrom coin//
+
 <br>
-     <div class="box1"> //helpme ต้องจัดใหม่//
+     <div class="box1"> 
 	    3.จงเขียนโปรแกรมเพื่อหาผลของการเล่นเกมต่อไปนี้
 	-  กล่องใบหนึ่งมีสลาก 3 ใบ มีหมายเลขกำกับ คือ 0, 1, 2
 	-  นักศึกษา จ่าย 1 บาทเพื่อ สุ่มหยิบสลากขึ้นมา 1 ใบ 
@@ -886,7 +811,7 @@ function Ex6 (){
     <div class="box2"> </div>
 
 <br>
- <div class="box1"> //helpmeต้องจัดใหม่//
+ <div class="box1"> 
 	 4.
 	-  กล่องใบหนึ่งมีสลาก 5 ใบ มีหมายเลขกำกับ คือ 0, 0, 0, 1, 4
 	-  นักศึกษา จ่าย 1 บาทเพื่อ สุ่มหยิบสลากขึ้นมา 1 ใบ 
@@ -1060,7 +985,7 @@ function Ex6 (){
 
 	<div align="right" style="width:400px;height:400px">
 	<br>
-	<table style="">
+	<table>
 			
 	<tbody>
 	<tr>
@@ -1151,4 +1076,5 @@ function Ex6 (){
 
 </body>
 </html>
+
 
